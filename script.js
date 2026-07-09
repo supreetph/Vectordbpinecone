@@ -1,4 +1,4 @@
-const apiKey = "pcsk_5aPByc_ANDua3VzQEUskuJ5aX9DcHKo8SRd4Pm5YBetheEiUV6P2VEQjVGdvYZzgAV2KMv"; 
+const apiKey = ""; 
 const host = "https://sample-movies-l7cyesi.svc.aped-4627-b74a.pinecone.io";
 
 async function fetchAvatarById() {
