@@ -1,15 +1,17 @@
-const apiKey = ""; 
-const host = "https://sample-movies-l7cyesi.svc.aped-4627-b74a.pinecone.io";
+const apiKey = "";
+const remoteHost = "https://sample-movies-l7cyesi.svc.aped-4627-b74a.pinecone.io";
+const isLocalDev = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+const fetchUrl = isLocalDev
+  ? "/pinecone/vectors/fetch?ids=0"
+  : `${remoteHost}/vectors/fetch?ids=0`;
 
 async function fetchAvatarById() {
   try {
-    // Note the query parameter format: ?ids=0
-    const response = await fetch(`${host}/vectors/fetch?ids=0`, {
-      method: 'GET',
-      headers: {
-        'Api-Key': apiKey,
-        'Content-Type': 'application/json'
-      }
+    const response = await fetch(fetchUrl, {
+      method: "GET",
+      headers: isLocalDev
+        ? { "Content-Type": "application/json" }
+        : { "Api-Key": apiKey, "Content-Type": "application/json" },
     });
 
     const data = await response.json();
