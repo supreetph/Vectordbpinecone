@@ -73,6 +73,51 @@ npm run example:update
 npm run example:delete
 ```
 
+## End-to-End CRUD Demo
+
+Run a single command to walk through the complete Pinecone vector lifecycle:
+
+```bash
+npm run demo:crud
+```
+
+### What it demonstrates
+
+1. Create / Upsert
+2. Read / Fetch
+3. Update
+4. Read again to verify update
+5. Query / Similarity Search
+6. Delete
+7. Verify deletion
+
+### Lifecycle
+
+```text
+Create
+  ↓
+Read
+  ↓
+Update
+  ↓
+Read Again
+  ↓
+Query
+  ↓
+Delete
+  ↓
+Verify Delete
+```
+
+### Fetch vs Query
+
+| Operation | Purpose |
+| --- | --- |
+| **FETCH** | Find a vector by its exact ID |
+| **QUERY** | Find similar vectors using vector similarity |
+
+The demo uses the `learning` namespace and a dedicated vector id (`crud-demo-001`). It does not modify the original sample movie vectors such as Avatar.
+
 ## Tests
 
 Unit tests (no Pinecone credentials required):
