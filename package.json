@@ -12,7 +12,8 @@
     "example:read": "node examples/read.js",
     "example:update": "node examples/update.js",
     "example:delete": "node examples/delete.js",
-    "example:search": "node examples/search.js"
+    "example:search": "node examples/search.js",
+    "demo:crud": "node examples/crud-demo.js"
   },
   "engines": {
     "node": ">=18"
