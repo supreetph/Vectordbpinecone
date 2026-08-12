@@ -1,7 +1,7 @@
 {
   "name": "Vectordbpinecone",
   "install": "bash .cursor/scripts/install.sh",
-  "start": "bash .cursor/scripts/start.sh",
+  "start": "",
   "terminals": [
     {
       "name": "dev-server",
