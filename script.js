@@ -14,9 +14,12 @@ async function fetchAvatarById() {
         : { "Api-Key": apiKey, "Content-Type": "application/json" },
     });
 
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
     const data = await response.json();
     console.log("🎬 Found Avatar Details:", data.vectors["0"].metadata);
-    
   } catch (error) {
     console.error("❌ Error fetching ID:", error.message);
   }

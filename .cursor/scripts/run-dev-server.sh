@@ -2,4 +2,4 @@
 set -euo pipefail
 
 cd /workspace
-exec python3 .cursor/scripts/dev-server.py
+exec node src/server.js

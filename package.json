@@ -1,0 +1,25 @@
+{
+  "name": "vectordbpinecone",
+  "version": "1.0.0",
+  "description": "Learn Pinecone vector CRUD with a simple JavaScript project",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node --test tests/unit/*.test.js",
+    "test:integration": "node --test tests/integration/*.test.js",
+    "example:create": "node examples/create.js",
+    "example:read": "node examples/read.js",
+    "example:update": "node examples/update.js",
+    "example:delete": "node examples/delete.js",
+    "example:search": "node examples/search.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@pinecone-database/pinecone": "^6.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
